@@ -8,11 +8,11 @@ This is a cost-sharing primitive. It neither selects suppliers nor schedules job
 
 1. Deploy with a fixed source repository.
 2. Anyone calls `allocate(commit_pinned_url, sha256)`.
-3. Leader and validators fetch full source bytes and independently interpret every coalition's total quote. Exact KNOWN/UNKNOWN and integer-cost agreement plus full-source quote verification is required.
+3. Leader and validators fetch full source bytes and independently interpret every coalition's total quote. Exact KNOWN/UNKNOWN and integer-cost agreement plus substantive full-source clause verification is required. Zero-based clause anchors resolve to exact fetched text rather than model-generated quotes.
 4. A missing price produces REVIEW without allocation. Decreasing coalition totals produce INCONSISTENT with subset/superset witnesses, because this instance restricts allocation to monotone cost games.
 5. For complete monotone tariffs, marginal contributions over all six joining orders produce exact sixth-unit shares. Proper coalitions whose charges exceed their standalone quote become explicit UNSTABLE witnesses. Otherwise the allocation is STABLE relative to the interpreted tariff.
 
-An integer largest-remainder preview preserves the total with amber/cobalt/jade tie order. Rational shares remain authoritative; rounded shares have separate core checks and may lose symmetry or stability.
+An integer largest-remainder preview preserves the total with amber/cobalt/jade tie order. Rational shares remain authoritative; rounded shares have separate core checks and may lose symmetry or hide rational instability.
 
 ## Files and verification
 

@@ -1,0 +1,5 @@
+{
+  "run_id": 37843547755,
+  "source_sha256": "4418b9d8da645829b556aefe644ec837a06d485ee09deb311b44e4f19df11c62",
+  "reason": "Generated tariff quote failed exact substring anchoring; additive call finalized MAJORITY_DISAGREE with rollback. No allocation recorded. Replaced generated quote text with independently checked exact-source clause indices; repaired source requires new deployment."
+}

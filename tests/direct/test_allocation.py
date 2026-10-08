@@ -16,7 +16,8 @@ def source(name):
     return f"https://raw.githubusercontent.com/{REPO}/{'a'*40}/records/{name}.json",hashlib.sha256(BODY[name]).hexdigest()
 
 def report(name):
-    return {'coalitions':[{'mask':mask,'decision':'UNKNOWN' if cost is None else 'KNOWN','cost':cost,'quote':json.loads(BODY[name])['tariff']} for mask,cost in enumerate(TABLES[name][1:],1)]}
+    anchors=list(range(len(re.split(r'(?<=[.!?])\s+',json.loads(BODY[name])['tariff']))))
+    return {'coalitions':[{'mask':mask,'decision':'UNKNOWN' if cost is None else 'KNOWN','cost':cost,'anchors':anchors} for mask,cost in enumerate(TABLES[name][1:],1)]}
 
 def mock(vm,name,leader=None,own=None,anchors=None,body=None):
     vm.clear_mocks()
@@ -79,14 +80,16 @@ def test_validator_substantive_quote_check(meter,direct_vm):
     run(meter,direct_vm,'missing');mock(direct_vm,'missing',anchors=[True]*6+[False])
     assert direct_vm.run_validator() is False
 
-@pytest.mark.parametrize('kind',['omitted','reordered','boolcost','unknown-cost','wrong-quote'])
+@pytest.mark.parametrize('kind',['omitted','reordered','boolcost','unknown-cost','wrong-quote','duplicate-anchor','bool-anchor'])
 def test_malformed_report_atomic_revert(meter,direct_vm,kind):
     bad=report('shared')
     if kind=='omitted':bad['coalitions'].pop()
     if kind=='reordered':bad['coalitions'].reverse()
     if kind=='boolcost':bad['coalitions'][0]['cost']=True
     if kind=='unknown-cost':bad['coalitions'][0]['decision']='UNKNOWN'
-    if kind=='wrong-quote':bad['coalitions'][0]['quote']='No applicable tariff clause'
+    if kind=='wrong-quote':bad['coalitions'][0]['anchors']=[999]
+    if kind=='duplicate-anchor':bad['coalitions'][0]['anchors']=[0,0]
+    if kind=='bool-anchor':bad['coalitions'][0]['anchors']=[True]
     mock(direct_vm,'shared',leader=bad)
     with direct_vm.expect_revert():meter.allocate(*source('shared'))
     assert meter.get_state()['batches']==[]
@@ -146,6 +149,7 @@ def test_exhaustive_2187_cost_tables_budget_core_and_domain():
         expected=[m for m in range(1,7) if sum(exact[i] for i in range(3) if m&(1<<i))>c[m]]
         assert [w['mask'] for w in r['core_violations']]==expected
         assert r['status']==('UNSTABLE' if expected else 'STABLE')
+        if not expected:assert not rounded_bad
         for witness in r['core_violations']:
             assert witness['charge_numerator']-witness['standalone_numerator']==witness['excess_numerator']>0
 
@@ -158,3 +162,9 @@ def test_fractional_symmetry_is_not_replaced_by_rounding():
 def test_dummy_member_has_zero_share():
     r=pure_compile()(table_report([0,2,3,5,0,2,3,5]))
     assert r['shares_numerator']==[12,18,0]
+
+def test_rounding_cannot_hide_authoritative_instability():
+    r=pure_compile()(table_report([0,0,0,1,1,1,1,1]))
+    assert r['shares_numerator']==[1,1,4] and r['status']=='UNSTABLE'
+    assert [w['mask'] for w in r['core_violations']]==[1,2]
+    assert r['rounded_preview']==[0,0,1] and r['rounded_core_violations']==[]

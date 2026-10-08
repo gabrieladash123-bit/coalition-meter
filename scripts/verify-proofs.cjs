@@ -28,7 +28,10 @@ for(const [index,tx] of m.transactions.entries()){
  assert.equal(batch.report.coalitions.length,7);
  const costs=[0];
  for(const [i,c] of batch.report.coalitions.entries()){
-  assert.equal(c.mask,i+1);assert.ok(record.tariff.includes(c.quote));assert.ok(c.quote.length>=12);
+  const clauses=record.tariff.split(/(?<=[.!?])\s+/);
+  assert.equal(c.mask,i+1);assert.ok(Array.isArray(c.anchors)&&c.anchors.length>0);
+  same(c.anchors,[...new Set(c.anchors)].sort((a,b)=>a-b));
+  c.anchors.forEach(i=>assert.ok(Number.isInteger(i)&&i>=0&&i<clauses.length&&record.tariff.includes(clauses[i])));
   assert.equal(c.decision,c.cost===null?'UNKNOWN':'KNOWN');costs.push(c.cost);
  }
  same(costs,expected[tx.label]);same(result.costs,costs);assert.equal(result.denominator,6);
