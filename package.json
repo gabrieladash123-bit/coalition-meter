@@ -1,0 +1,7 @@
+{
+  "name": "coalition-meter",
+  "private": true,
+  "devDependencies": {
+    "genlayer": "0.39.2"
+  }
+}

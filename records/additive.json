@@ -1,0 +1,17 @@
+{
+  "members": [
+    {
+      "id": "amber",
+      "request": "Store the supplied amber archive for one billing period."
+    },
+    {
+      "id": "cobalt",
+      "request": "Store the supplied cobalt archive for one billing period."
+    },
+    {
+      "id": "jade",
+      "request": "Store the supplied jade archive for one billing period."
+    }
+  ],
+  "tariff": "For the stated one-period archive requests, Amber alone costs 6 units, Cobalt alone costs 12 units and Jade alone costs 18 units. A group pays the sum of its members' standalone prices, without discounts, surcharges or any other charge. All requests are covered by these unconditional prices."
+}

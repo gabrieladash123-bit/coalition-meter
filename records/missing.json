@@ -1,0 +1,17 @@
+{
+  "members": [
+    {
+      "id": "amber",
+      "request": "Store the supplied amber archive for one billing period."
+    },
+    {
+      "id": "cobalt",
+      "request": "Store the supplied cobalt archive for one billing period."
+    },
+    {
+      "id": "jade",
+      "request": "Store the supplied jade archive for one billing period."
+    }
+  ],
+  "tariff": "For the stated one-period archive requests, any one member alone costs 10 units. Any group containing exactly two members pays 14 units TOTAL, not per member. The group of all three requires a custom quote which has not been provided; its total price cannot be determined. No other charges or conditions apply to the one-member and two-member groups."
+}
