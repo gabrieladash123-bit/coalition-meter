@@ -56,6 +56,15 @@ def test_missing_quote_prevents_entire_allocation(meter,direct_vm):
     assert r['status']=='REVIEW' and r['unknown']==[7]
     assert r['shares_numerator']==r['rounded_preview']==[]
 
+def test_explicit_unknown_omitted_cost_normalizes_to_null(meter,direct_vm):
+    proposed=report('missing');del proposed['coalitions'][6]['cost']
+    mock(direct_vm,'missing',leader=proposed,own=proposed)
+    meter.allocate(*source('missing'))
+    r=meter.get_state()['batches'][0]
+    assert r['report']['coalitions'][6]['cost'] is None
+    assert r['result']['status']=='REVIEW' and r['result']['shares_numerator']==[]
+    assert direct_vm.run_validator() is True
+
 def test_promotional_price_is_preserved_and_domain_violation_exposed(meter,direct_vm):
     r=run(meter,direct_vm,'nonmonotone')
     assert r['costs'][7]==9 and r['status']=='INCONSISTENT'

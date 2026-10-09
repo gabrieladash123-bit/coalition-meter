@@ -1,0 +1,5 @@
+{
+  "run_id": 37885035952,
+  "source_sha256": "47b318aec2bad749e9b0ae53e9b69a1e12f1d1e3c9052de3ab5a45a3b60e804a",
+  "reason": "Three prior allocations were accepted; missing-price call rejected an invalid coalition schema. New parser normalizes omitted cost to null only for explicit UNKNOWN. KNOWN still requires an exact integer cost. Prior source cannot be resumed after this source change."
+}

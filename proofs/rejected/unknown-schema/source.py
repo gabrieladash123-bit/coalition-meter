@@ -49,12 +49,7 @@ def parse_report(raw, record):
     if not isinstance(raw, dict) or set(raw) != {"coalitions"} or not isinstance(raw["coalitions"], list) or len(raw["coalitions"]) != 7:
         fail("[LLM_ERROR] Require all seven coalitions")
     for row, mask in zip(raw["coalitions"], range(1, 8)):
-        if not isinstance(row, dict):
-            fail("[LLM_ERROR] Invalid coalition identity")
-        if row.get("decision") == "UNKNOWN" and set(row) == {"mask", "decision", "anchors"}:
-            row["cost"] = None
-        if set(row) != {"mask", "decision", "cost", "anchors"} or type(row["mask"]) is not int or row["mask"] != mask:
-            print("COALITIONMETER malformed row", canon(row))
+        if not isinstance(row, dict) or set(row) != {"mask", "decision", "cost", "anchors"} or type(row["mask"]) is not int or row["mask"] != mask:
             fail("[LLM_ERROR] Invalid coalition identity")
         if row["decision"] not in ("KNOWN", "UNKNOWN") or (row["decision"] == "KNOWN" and (type(row["cost"]) is not int or not 0 <= row["cost"] <= 60)) or (row["decision"] == "UNKNOWN" and row["cost"] is not None):
             fail("[LLM_ERROR] Invalid total cost decision")
