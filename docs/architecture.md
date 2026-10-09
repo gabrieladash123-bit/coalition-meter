@@ -10,6 +10,8 @@ Leader and validators fetch complete bytes inside nondeterministic functions, re
 
 The meaningful nondeterministic output is the full coalition cost function, including refusals to assign missing prices. It controls members' shares and whether any subset is overcharged. Deterministic allocation arithmetic alone cannot recover these costs from opaque commitments. Missing data changes the result to REVIEW rather than an inferred allocation.
 
+Both derivation and clause checking receive expanded named-member lists for every mask. The separate clause judge resolves anchor indices into exact texts and must return one identified mask, positive boolean and substantive explanation for each of seven coalitions. Derived totals need not occur verbatim when cited pricing rules explicitly authorize arithmetic. An explanation accompanies the judgment; string length alone never approves a decision. Diagnostic stdout preserves independent costs and anchor verdicts, including failures. Three earlier rejected runs are retained separately and are not counted as accepted demonstrations.
+
 ## Math and statuses
 
 Empty coalition cost is zero by policy. UNKNOWN anywhere prevents allocation. Complete prices are checked for monotonicity over all subset/superset pairs. INCONSISTENT means outside this primitive's monotone domain, not proof that a commercial promotion is false. This restriction guarantees nonnegative marginal shares.

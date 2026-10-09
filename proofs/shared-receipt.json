@@ -1,0 +1,189 @@
+{
+  "hash": "0x9dc3dd60ebd401ac965bbb648bba6f74d6140f3f788cc23cae0e46bddb93b662",
+  "from_address": "0xE8A6bC3b9348C33764Fa81181A01243Da1DF2e2d",
+  "to_address": "0x57CDF2dfcA702b0aA2BAFd620629b54B47F57975",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/shared.json\",\"c06672646367b1bd7a802f43fbae3858a1b7cbf4ae3f27bf536edcb408605be2\",]\"method\":\"allocate\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+      "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/shared.json\",\"c06672646367b1bd7a802f43fbae3858a1b7cbf4ae3f27bf536edcb408605be2\",]\"method\":\"allocate\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"members\":[{\"id\":\"amber\"\"request\":\"Store the supplied amber archive for one billing period.\"},{\"id\":\"cobalt\"\"request\":\"Store the supplied cobalt archive for one billing period.\"},{\"id\":\"jade\"\"request\":\"Store the supplied jade archive for one billing period.\"},]\"tariff\":\"For the stated one-period archive requests, any one member alone costs 10 units. Any group containing exactly two members pays 14 units TOTAL for the group, not per member. The group of all three pays 18 units TOTAL. No extra fees, prerequisites or exclusions apply.\"}\"report\":{\"coalitions\":[{\"anchors\":[0,3,]\"cost\":10\"decision\":\"KNOWN\"\"mask\":1},{\"anchors\":[0,3,]\"cost\":10\"decision\":\"KNOWN\"\"mask\":2},{\"anchors\":[1,3,]\"cost\":14\"decision\":\"KNOWN\"\"mask\":3},{\"anchors\":[0,3,]\"cost\":10\"decision\":\"KNOWN\"\"mask\":4},{\"anchors\":[1,3,]\"cost\":14\"decision\":\"KNOWN\"\"mask\":5},{\"anchors\":[1,3,]\"cost\":14\"decision\":\"KNOWN\"\"mask\":6},{\"anchors\":[2,3,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":7},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[1],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[1],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[1],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Single member 'amber' maps to clause 0: any one member alone costs 10 units. Clause 3 confirms no extra fees. Total 10 is supported.\",\"valid\":true},{\"mask\":2,\"reason\":\"Single member 'cobalt' maps to clause 0: any one member alone costs 10 units. Clause 3 confirms no extra fees. Total 10 is supported.\",\"valid\":true},{\"mask\":3,\"reason\":\"Group of exactly two members ('amber','cobalt') maps to clause 1: any group containing exactly two members pays 14 units TOTAL. Clause 3 confirms no extra fees. Total 14 is supported.\",\"valid\":true},{\"mask\":4,\"reason\":\"Single member 'jade' maps to clause 0: any one member alone costs 10 units. Clause 3 confirms no extra fees. Total 10 is supported.\",\"valid\":true},{\"mask\":5,\"reason\":\"Group of exactly two members ('amber','jade') maps to clause 1: any group containing exactly two members pays 14 units TOTAL. Clause 3 confirms no extra fees. Total 14 is supported.\",\"valid\":true},{\"mask\":6,\"reason\":\"Group of exactly two members ('cobalt','jade') maps to clause 1: any group containing exactly two members pays 14 units TOTAL. Clause 3 confirms no extra fees. Total 14 is supported.\",\"valid\":true},{\"mask\":7,\"reason\":\"Group of all three members ('amber','cobalt','jade') maps to clause 2: the group of all three pays 18 units TOTAL. Clause 3 confirms no extra fees. Total 18 is supported.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/shared.json\",\"c06672646367b1bd7a802f43fbae3858a1b7cbf4ae3f27bf536edcb408605be2\",]\"method\":\"allocate\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[2,3],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Mask 1 names only amber, so the single-member clause applies: any one member alone costs 10 units. The no-extra-fees clause removes additional conditions. Thus 10 is uniquely supported for this one-member group.\",\"valid\":true},{\"mask\":2,\"reason\":\"Mask 2 names only cobalt, so the single-member clause applies: any one member alone costs 10 units. The no-extra-fees clause removes additional conditions. Thus 10 is uniquely supported for this one-member group.\",\"valid\":true},{\"mask\":3,\"reason\":\"Mask 3 names amber and cobalt, an exactly two-member group. The tariff states any group containing exactly two members pays 14 units total for the group, not per member. With no extra fees or exclusions, total cost 14 is uniquely supported.\",\"valid\":true},{\"mask\":4,\"reason\":\"Mask 4 names only jade, so the single-member clause applies: any one member alone costs 10 units. The no-extra-fees clause removes additional conditions. Thus 10 is uniquely supported for this one-member group.\",\"valid\":true},{\"mask\":5,\"reason\":\"Mask 5 names amber and jade, an exactly two-member group. The tariff states any group containing exactly two members pays 14 units total for the group, not per member. With no extra fees or exclusions, total cost 14 is uniquely supported.\",\"valid\":true},{\"mask\":6,\"reason\":\"Mask 6 names cobalt and jade, an exactly two-member group. The tariff states any group containing exactly two members pays 14 units total for the group, not per member. With no extra fees or exclusions, total cost 14 is uniquely supported.\",\"valid\":true},{\"mask\":7,\"reason\":\"Mask 7 names amber, cobalt, and jade, which is the group of all three. The tariff explicitly states the group of all three pays 18 units total. The no-extra-fees clause means nothing else modifies that amount, so 18 is uniquely supported.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,3],\"cost\":10,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[1,3],\"cost\":14,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[2,3],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Clause 0 explicitly states that any one member alone costs 10 units. Member 'amber' is a single member.\",\"valid\":true},{\"mask\":2,\"reason\":\"Clause 0 explicitly states that any one member alone costs 10 units. Member 'cobalt' is a single member.\",\"valid\":true},{\"mask\":3,\"reason\":\"Clause 1 states that a group containing exactly two members pays 14 units total. The list ['amber', 'cobalt'] has a cardinality of 2.\",\"valid\":true},{\"mask\":4,\"reason\":\"Clause 0 explicitly states that any one member alone costs 10 units. Member 'jade' is a single member.\",\"valid\":true},{\"mask\":5,\"reason\":\"Clause 1 states that a group containing exactly two members pays 14 units total. The list ['amber', 'jade'] has a cardinality of 2.\",\"valid\":true},{\"mask\":6,\"reason\":\"Clause 1 states that a group containing exactly two members pays 14 units total. The list ['cobalt', 'jade'] has a cardinality of 2.\",\"valid\":true},{\"mask\":7,\"reason\":\"Clause 2 states that the group of all three pays 18 units total. The list ['amber', 'cobalt', 'jade'] constitutes the group of all three members.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      }
+    ]
+  },
+  "gaslimit": 2,
+  "nonce": 2,
+  "created_at": "2026-10-09T04:44:16.820302+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0xE8A6bC3b9348C33764Fa81181A01243Da1DF2e2d",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022902808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a99000000000000000000000000e8a6bc3b9348c33764fa81181a01243da1df2e2d00000000000000000000000057cdf2dfca702b0aa2bafd620629b54b47f579750000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e2f8e0b8dd16046172677315940868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f636f616c6974696f6e2d6d657465722f346663323536636362333737333234313764653633613535396535373339643464356239373031312f7265636f7264732f7368617265642e6a736f6e840463303636373236343633363762316264376138303266343366626165333835386131623763626634616533663237626635333665646362343038363035626532066d6574686f6444616c6c6f63617465000000000000000000000000000000000000000000000000000000000000008301e482a06bb17236ef48f98920f76732f20a4996b32b6d218f1332a2b0fbba5024aed9aaa031442dfe7ea04bd205faaf2dc7aa50bc930c92e91b12fdb3e6f0c8edee0d6a47"
+  },
+  "value_credited": false,
+  "sender": "0xE8A6bC3b9348C33764Fa81181A01243Da1DF2e2d",
+  "recipient": "0x57CDF2dfcA702b0aA2BAFd620629b54B47F57975",
+  "tx_id": "0x9dc3dd60ebd401ac965bbb648bba6f74d6140f3f788cc23cae0e46bddb93b662",
+  "activator": "0xE6BD8050758CB15fC88387223E31Ae2708B119dC",
+  "last_leader": "0xE6BD8050758CB15fC88387223E31Ae2708B119dC",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC",
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100",
+      "0x3E5ee2507cc167C9925Bf10c67D7986581112024",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2"
+    ],
+    "validator_votes_hash": [
+      "0x4f4407ed60c1d0bd974466d4ed0df0ec8eaccfaa1e4c64992865d4b6bdb641bb",
+      "0x6bb4bc2d8a395d16e6aa5644e8a4073db0b3730673151b9a770fcca1c16a3e54",
+      "0xcb4aff5888c08c821fcb07a6ed6728a5d33bcf32242ad472cc8633a6f7d03fc5",
+      "0x8c59f04c8c74d230f353f04f9e3353a3b3d6364e561a680ba51c840499d115ae",
+      "0x62f877b91755dd165c47a35acd7be7b46bb1b27ecbf03a4da08d32891fd0f963"
+    ],
+    "validator_votes": [
+      1,
+      5,
+      1,
+      1,
+      5
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "IDLE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

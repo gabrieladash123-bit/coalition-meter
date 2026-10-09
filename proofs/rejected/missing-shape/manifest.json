@@ -1,0 +1,5 @@
+{
+  "run_id": 37885035952,
+  "transaction": "0xa9350652aa34696ed7bcd533eb1f71aeba061932486a9f755ce5fca97709b6d0",
+  "reason": "Leader response failed coalition schema: Invalid coalition identity. Finalized MAJORITY_DISAGREE/ERROR; no accepted allocation. Retained separately. One new call on unchanged source will evaluate this scenario again; no consensus thresholds or semantic checks changed."
+}

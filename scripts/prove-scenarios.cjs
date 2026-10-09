@@ -123,7 +123,18 @@ async function rpc(method, params) {
   await receipt('pool-deploy',deployHash);
   const transactions=[{label:'pool-deploy',action:'deploy',hash:deployHash}];
   const steps=Object.keys(expected).map(name=>({name,method:'allocate',source:name}));
+  const initialState=result(await invoke('initial-state',['call',contract,'get_state']));
   for(const step of steps) {
+    const cachedPath=path.join(proofs,step.name+'.json');
+    if(fs.existsSync(cachedPath)){
+      const cached=JSON.parse(fs.readFileSync(cachedPath,'utf8'));
+      const accepted=JSON.parse(fs.readFileSync(path.join(proofs,step.name+'-receipt.json'),'utf8'));
+      const index=transactions.length-1;
+      if(cached.contract_address!==contract || cached.source_sha256!==sourceHash || cached.transaction.hash!==accepted.hash || accepted.result_name!=='MAJORITY_AGREE' || (accepted.statusName||accepted.status_name)!=='FINALIZED' || !equal(initialState.batches[index],cached.state.batches[index]) || initialState.batches[index]?.sha256!==sources[step.source].sha256)throw Error('Unsafe cached proof resume '+step.name);
+      transactions.push(cached.transaction);
+      console.log('REUSED VERIFIED RECEIPT',step.name,cached.transaction.hash);
+      continue;
+    }
     // Leave room for receipt polls and shared gateway rate limits.
     await new Promise(resolve=>setTimeout(resolve,15000));
     const args=step.source ? ['--args',sources[step.source].url,sources[step.source].sha256] : [];
