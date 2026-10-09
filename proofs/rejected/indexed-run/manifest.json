@@ -1,0 +1,5 @@
+{
+  "run_id": 37846065326,
+  "source_sha256": "fd3560d0a92811a052a9abff22f285a4acf13cd106dad7476bbdab673810d5c6",
+  "reason": "Leader generated correct additive table, but validators rejected; transaction finalized MAJORITY_DISAGREE. No accepted allocation. Diagnostic source records independent decisions and anchor verdicts without changing acceptance checks."
+}

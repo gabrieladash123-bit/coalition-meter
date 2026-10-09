@@ -1,0 +1,189 @@
+{
+  "hash": "0x29f0c230e2703ca7419ef4ae44e2bafff70c3c060f7a3cd19ca40ca36969bf17",
+  "from_address": "0x60E478705f6942444bC75c377C5A55c79b93098E",
+  "to_address": "0x495597F1c4957BD0a088e3C7B32Be2A68F189AD0",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+    }
+  },
+  "status": 7,
+  "result": 7,
+  "consensus_data": {
+    "votes": {
+      "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "disagree",
+      "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "disagree",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "disagree",
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"members\":[{\"id\":\"amber\"\"request\":\"Store the supplied amber archive for one billing period.\"},{\"id\":\"cobalt\"\"request\":\"Store the supplied cobalt archive for one billing period.\"},{\"id\":\"jade\"\"request\":\"Store the supplied jade archive for one billing period.\"},]\"tariff\":\"For the stated one-period archive requests, Amber alone costs 6 units, Cobalt alone costs 12 units and Jade alone costs 18 units. A group pays the sum of its members' standalone prices, without discounts, surcharges or any other charge. All requests are covered by these unconditional prices.\"}\"report\":{\"coalitions\":[{\"anchors\":[0,1,2,]\"cost\":6\"decision\":\"KNOWN\"\"mask\":1},{\"anchors\":[0,1,2,]\"cost\":12\"decision\":\"KNOWN\"\"mask\":2},{\"anchors\":[0,1,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":3},{\"anchors\":[0,1,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":4},{\"anchors\":[0,1,2,]\"cost\":24\"decision\":\"KNOWN\"\"mask\":5},{\"anchors\":[0,1,2,]\"cost\":30\"decision\":\"KNOWN\"\"mask\":6},{\"anchors\":[0,1,2,]\"cost\":36\"decision\":\"KNOWN\"\"mask\":7},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      }
+    ]
+  },
+  "gaslimit": 1,
+  "nonce": 1,
+  "created_at": "2026-10-08T21:21:49.636561+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x60E478705f6942444bC75c377C5A55c79b93098E",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022901808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a9900000000000000000000000060e478705f6942444bc75c377c5a55c79b93098e000000000000000000000000495597f1c4957bd0a088e3c7b32be2a68f189ad00000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e4f8e2b8df16046172677315a40868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f636f616c6974696f6e2d6d657465722f346663323536636362333737333234313764653633613535396535373339643464356239373031312f7265636f7264732f61646469746976652e6a736f6e840438643037646432343931363165316164363735653335636639656666363364653362336439303336353762663930646433386437386438373265666435313831066d6574686f6444616c6c6f6361746500000000000000000000000000000000000000000000000000000000008301e481a06853fed4da8c4ce8fdb7451354921d08b5c3dcde0385ccbbb847896559ef555ca064560e053ef39b9f090bed6aed47b0654b2d2f18603a847888a4cbd33006ef70"
+  },
+  "value_credited": false,
+  "sender": "0x60E478705f6942444bC75c377C5A55c79b93098E",
+  "recipient": "0x495597F1c4957BD0a088e3C7B32Be2A68F189AD0",
+  "tx_id": "0x29f0c230e2703ca7419ef4ae44e2bafff70c3c060f7a3cd19ca40ca36969bf17",
+  "activator": "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+  "last_leader": "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84",
+  "result_name": "MAJORITY_DISAGREE",
+  "num_of_rounds": "4",
+  "last_round": {
+    "round": "3",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "0",
+    "result": 7,
+    "round_validators": [
+      "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88",
+      "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d",
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67"
+    ],
+    "validator_votes_hash": [
+      "0x23b14584bdcb273324091056aa4f30e57a4df1353fd12b4cdbe4f87e83afe238",
+      "0x492a2a83b44923992229424f0e4fe60bda0ceba273984db430526043e89a517a",
+      "0xa31f0be46786da72e3de887e38afcd54078d871c6a365af15a851847f89ed8ae",
+      "0xfa56661e74bea056a66d0a87d0b68d66c6a7ea1d10f973235a56a1d57b1117fc",
+      "0x1b1eedc3b9e2b3621cadb0fdbd70ce38a16785a70cff0968e072e206c6913918"
+    ],
+    "validator_votes": [
+      2,
+      2,
+      5,
+      5,
+      2
+    ],
+    "validator_votes_name": [
+      "DISAGREE",
+      "DISAGREE",
+      "IDLE",
+      "IDLE",
+      "DISAGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}
