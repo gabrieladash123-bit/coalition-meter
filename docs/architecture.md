@@ -10,7 +10,9 @@ Leader and validators fetch complete bytes inside nondeterministic functions, re
 
 The meaningful nondeterministic output is the full coalition cost function, including refusals to assign missing prices. It controls members' shares and whether any subset is overcharged. Deterministic allocation arithmetic alone cannot recover these costs from opaque commitments. Missing data changes the result to REVIEW rather than an inferred allocation.
 
-Both derivation and clause checking receive expanded named-member lists for every mask. The separate clause judge resolves anchor indices into exact texts and must return one identified mask, positive boolean and substantive explanation for each of seven coalitions. Derived totals need not occur verbatim when cited pricing rules explicitly authorize arithmetic. An explanation accompanies the judgment; string length alone never approves a decision. Diagnostic stdout preserves independent costs and anchor verdicts, including failures. Three earlier rejected runs are retained separately and are not counted as accepted demonstrations.
+Both derivation and clause checking receive expanded named-member lists for every mask. The separate clause judge resolves anchor indices into exact texts and must return one identified mask, positive boolean and substantive explanation for each of seven coalitions. Derived totals need not occur verbatim when cited pricing rules explicitly authorize arithmetic. An explanation accompanies the judgment; string length alone never approves a decision. Diagnostic stdout preserves independent costs and anchor verdicts, including failures. Earlier rejected runs are retained separately and are not counted as accepted demonstrations.
+
+An omitted cost is normalized to null only when the model explicitly labels that coalition UNKNOWN and otherwise supplies exactly its mask and anchors. This conservative normalization never fabricates a price: UNKNOWN still blocks the entire allocation and must independently agree and pass clause verification. KNOWN always requires an explicit bounded integer. Extra keys and other malformed reports remain rejected.
 
 ## Math and statuses
 

@@ -1,0 +1,5 @@
+{
+  "run_id": 37886018089,
+  "transaction": "0xca526602c33dbd5c5fc5eca5e6f809ae6ef68133a1c7c6bf33d62ab6f3d61777",
+  "reason": "The unchanged previous source rejected a second malformed missing-price response. Preserved as rejected; not counted in current proof set. Final source subsequently normalized omitted cost only for explicit UNKNOWN and completed all five scenarios."
+}

@@ -1,0 +1,182 @@
+{
+  "hash": "0xca526602c33dbd5c5fc5eca5e6f809ae6ef68133a1c7c6bf33d62ab6f3d61777",
+  "from_address": "0x7659A3aeCFC29295B288121938C6938f871f4bcd",
+  "to_address": "0x57CDF2dfcA702b0aA2BAFd620629b54B47F57975",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/missing.json\",\"d915782ecd52fe5323cc97ae5c9b0a4598f27e5820bccdb5d7c399800b6e2e75\",]\"method\":\"allocate\"}"
+    }
+  },
+  "status": 7,
+  "result": 7,
+  "consensus_data": {
+    "votes": {
+      "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "disagree",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "disagree",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "disagree",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/missing.json\",\"d915782ecd52fe5323cc97ae5c9b0a4598f27e5820bccdb5d7c399800b6e2e75\",]\"method\":\"allocate\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "rollback",
+            "payload": "[LLM_ERROR] Invalid coalition identity"
+          }
+        },
+        "result": {
+          "status": "rollback",
+          "payload": "[LLM_ERROR] Invalid coalition identity"
+        }
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/missing.json\",\"d915782ecd52fe5323cc97ae5c9b0a4598f27e5820bccdb5d7c399800b6e2e75\",]\"method\":\"allocate\"}"
+        },
+        "result": {
+          "status": "rollback",
+          "payload": "[LLM_ERROR] Invalid coalition identity"
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      }
+    ]
+  },
+  "gaslimit": 0,
+  "created_at": "2026-10-09T04:54:45.242495+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x7659A3aeCFC29295B288121938C6938f871f4bcd",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022980808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a990000000000000000000000007659a3aecfc29295b288121938c6938f871f4bcd00000000000000000000000057cdf2dfca702b0aa2bafd620629b54b47f579750000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e3f8e1b8de160461726773159c0868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f636f616c6974696f6e2d6d657465722f346663323536636362333737333234313764653633613535396535373339643464356239373031312f7265636f7264732f6d697373696e672e6a736f6e840464393135373832656364353266653533323363633937616535633962306134353938663237653538323062636364623564376333393938303062366532653735066d6574686f6444616c6c6f636174650000000000000000000000000000000000000000000000000000000000008301e481a028b6cf7ae639a2d54a0a534438805f920ce041e587267703d2b143b6ee61a0e9a02ac292fff892322052e0aba9828d2cb31cb542b6574cb349b1aa4d22dd3bb623"
+  },
+  "value_credited": false,
+  "sender": "0x7659A3aeCFC29295B288121938C6938f871f4bcd",
+  "recipient": "0x57CDF2dfcA702b0aA2BAFd620629b54B47F57975",
+  "tx_id": "0xca526602c33dbd5c5fc5eca5e6f809ae6ef68133a1c7c6bf33d62ab6f3d61777",
+  "activator": "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d",
+  "last_leader": "0x3E5ee2507cc167C9925Bf10c67D7986581112024",
+  "result_name": "MAJORITY_DISAGREE",
+  "num_of_rounds": "4",
+  "last_round": {
+    "round": "3",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "0",
+    "result": 7,
+    "round_validators": [
+      "0x3E5ee2507cc167C9925Bf10c67D7986581112024",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47"
+    ],
+    "validator_votes_hash": [
+      "0x1698c803069e2a09f0aa51b8a6aadb9ae33dcee21ff01f7e9e63f76d98d8924b",
+      "0x79626ee5a6a66539fdc90bfa5d14b5382e8ea860b58880e96f8e8ccb9b1bf6d1",
+      "0x29174660eae16c57a686e022a3b3e75623a0a4f4bc686c9728a45414164ac2cf",
+      "0x8dcbd2f221e874f224d1e1fc9a7986d9e601acd4be79ce8b22777879b08c431c",
+      "0x4f707400abe3a872c59232007f5d9aaa6ff4aeb53bf2f22efd4d3bb0fa27bf65"
+    ],
+    "validator_votes": [
+      2,
+      5,
+      2,
+      2,
+      5
+    ],
+    "validator_votes_name": [
+      "DISAGREE",
+      "IDLE",
+      "DISAGREE",
+      "DISAGREE",
+      "IDLE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

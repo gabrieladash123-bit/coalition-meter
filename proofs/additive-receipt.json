@@ -1,0 +1,180 @@
+{
+  "hash": "0xe76d3319fb7db8413ae8f78cdcba876e88f37e68c186fdcdb461977b3d4c95a0",
+  "from_address": "0x7A844e4ccb66C0f52a39Da00C7461d572E48342A",
+  "to_address": "0x3895e3953bc4aB21A4d39d4d447D708D3598dB03",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+      "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "disagree",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"members\":[{\"id\":\"amber\"\"request\":\"Store the supplied amber archive for one billing period.\"},{\"id\":\"cobalt\"\"request\":\"Store the supplied cobalt archive for one billing period.\"},{\"id\":\"jade\"\"request\":\"Store the supplied jade archive for one billing period.\"},]\"tariff\":\"For the stated one-period archive requests, Amber alone costs 6 units, Cobalt alone costs 12 units and Jade alone costs 18 units. A group pays the sum of its members' standalone prices, without discounts, surcharges or any other charge. All requests are covered by these unconditional prices.\"}\"report\":{\"coalitions\":[{\"anchors\":[0,2,]\"cost\":6\"decision\":\"KNOWN\"\"mask\":1},{\"anchors\":[0,2,]\"cost\":12\"decision\":\"KNOWN\"\"mask\":2},{\"anchors\":[0,1,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":3},{\"anchors\":[0,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":4},{\"anchors\":[0,1,2,]\"cost\":24\"decision\":\"KNOWN\"\"mask\":5},{\"anchors\":[0,1,2,]\"cost\":30\"decision\":\"KNOWN\"\"mask\":6},{\"anchors\":[0,1,2,]\"cost\":36\"decision\":\"KNOWN\"\"mask\":7},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle",
+        "result": {
+          "status": "contract_error",
+          "payload": "idle"
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Clause 0 explicitly states Amber alone costs 6 units, and Clause 2 confirms this covers the request.\",\"valid\":true},{\"mask\":2,\"reason\":\"Clause 0 explicitly states Cobalt alone costs 12 units, and Clause 2 confirms this covers the request.\",\"valid\":true},{\"mask\":3,\"reason\":\"Per Clause 1, the total is the sum of standalone prices: Amber (6) + Cobalt (12) = 18 units.\",\"valid\":true},{\"mask\":4,\"reason\":\"Clause 0 explicitly states Jade alone costs 18 units, and Clause 2 confirms this covers the request.\",\"valid\":true},{\"mask\":5,\"reason\":\"Per Clause 1, the total is the sum of standalone prices: Amber (6) + Jade (18) = 24 units.\",\"valid\":true},{\"mask\":6,\"reason\":\"Per Clause 1, the total is the sum of standalone prices: Cobalt (12) + Jade (18) = 30 units.\",\"valid\":true},{\"mask\":7,\"reason\":\"Per Clause 1, the total is the sum of standalone prices: Amber (6) + Cobalt (12) + Jade (18) = 36 units.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Clause 1 gives Amber alone as 6 units, and clause 3 says these prices unconditionally cover the stated request. So Amber's total is uniquely 6.\",\"valid\":true},{\"mask\":2,\"reason\":\"Clause 1 gives Cobalt alone as 12 units, and clause 3 says these prices unconditionally cover the stated request. So Cobalt's total is uniquely 12.\",\"valid\":true},{\"mask\":3,\"reason\":\"Members are Amber and Cobalt. Clause 1 gives standalone prices 6 and 12, and clause 2 says a group pays the sum of members' standalone prices with no other charges. 6 + 12 = 18, unconditionally covered by clause 3.\",\"valid\":true},{\"mask\":4,\"reason\":\"Clause 1 gives Jade alone as 18 units, and clause 3 says these prices unconditionally cover the stated request. So Jade's total is uniquely 18.\",\"valid\":true},{\"mask\":5,\"reason\":\"Members are Amber and Jade. Clause 1 gives standalone prices 6 and 18, and clause 2 says a group pays the sum of members' standalone prices with no other charges. 6 + 18 = 24, unconditionally covered by clause 3.\",\"valid\":true},{\"mask\":6,\"reason\":\"Members are Cobalt and Jade. Clause 1 gives standalone prices 12 and 18, and clause 2 says a group pays the sum of members' standalone prices with no other charges. 12 + 18 = 30, unconditionally covered by clause 3.\",\"valid\":true},{\"mask\":7,\"reason\":\"Members are Amber, Cobalt, and Jade. Clause 1 gives standalone prices 6, 12, and 18, and clause 2 says a group pays the sum of members' standalone prices with no other charges. 6 + 12 + 18 = 36, unconditionally covered by clause 3.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,1,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,1,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"checks\":[{\"mask\":1,\"reason\":\"Clause 0 states Amber alone costs 6 units; clause 2 confirms this price is unconditional and covers the request. Single member 'amber' \\u2192 6. Correct.\",\"valid\":true},{\"mask\":2,\"reason\":\"Clause 0 states Cobalt alone costs 12 units; clause 2 confirms this price is unconditional and covers the request. Single member 'cobalt' \\u2192 12. Correct.\",\"valid\":true},{\"mask\":3,\"reason\":\"Clause 0 gives Amber=6 and Cobalt=12; clause 1 states a group pays the sum of standalone prices with no discounts or surcharges; clause 2 confirms unconditional coverage. Members: amber + cobalt \\u2192 6 + 12 = 18. Correct.\",\"valid\":true},{\"mask\":4,\"reason\":\"Clause 0 states Jade alone costs 18 units; clause 2 confirms this price is unconditional and covers the request. Single member 'jade' \\u2192 18. Correct.\",\"valid\":true},{\"mask\":5,\"reason\":\"Clause 0 gives Amber=6 and Jade=18; clause 1 states a group pays the sum of standalone prices with no discounts or surcharges; clause 2 confirms unconditional coverage. Members: amber + jade \\u2192 6 + 18 = 24. Correct.\",\"valid\":true},{\"mask\":6,\"reason\":\"Clause 0 gives Cobalt=12 and Jade=18; clause 1 states a group pays the sum of standalone prices with no discounts or surcharges; clause 2 confirms unconditional coverage. Members: cobalt + jade \\u2192 12 + 18 = 30. Correct.\",\"valid\":true},{\"mask\":7,\"reason\":\"Clause 0 gives Amber=6, Cobalt=12, Jade=18; clause 1 states a group pays the sum of standalone prices with no discounts or surcharges; clause 2 confirms unconditional coverage. Members: amber + cobalt + jade \\u2192 6 + 12 + 18 = 36. Correct.\",\"valid\":true}]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      }
+    ]
+  },
+  "gaslimit": 1,
+  "nonce": 1,
+  "created_at": "2026-10-09T05:06:46.146203+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x7A844e4ccb66C0f52a39Da00C7461d572E48342A",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022901808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a990000000000000000000000007a844e4ccb66c0f52a39da00c7461d572e48342a0000000000000000000000003895e3953bc4ab21a4d39d4d447d708d3598db030000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e4f8e2b8df16046172677315a40868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f636f616c6974696f6e2d6d657465722f346663323536636362333737333234313764653633613535396535373339643464356239373031312f7265636f7264732f61646469746976652e6a736f6e840438643037646432343931363165316164363735653335636639656666363364653362336439303336353762663930646433386437386438373265666435313831066d6574686f6444616c6c6f6361746500000000000000000000000000000000000000000000000000000000008301e481a0a63c7c0efaebdd43ffcd25515acb19996fab016b289e886eeab80b27cb3c81b8a018a99e48457575495265fc63e2f6a2295eeccd5110fae93394931170b1bf49d9"
+  },
+  "value_credited": false,
+  "sender": "0x7A844e4ccb66C0f52a39Da00C7461d572E48342A",
+  "recipient": "0x3895e3953bc4aB21A4d39d4d447D708D3598dB03",
+  "tx_id": "0xe76d3319fb7db8413ae8f78cdcba876e88f37e68c186fdcdb461977b3d4c95a0",
+  "activator": "0x36728d2a123aB444E603EE5b2ad17d18Bb193557",
+  "last_leader": "0x36728d2a123aB444E603EE5b2ad17d18Bb193557",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x36728d2a123aB444E603EE5b2ad17d18Bb193557",
+      "0x90402341F0B0e97b23023c0a87de957FB7148E0F",
+      "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE",
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC",
+      "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67"
+    ],
+    "validator_votes_hash": [
+      "0xd2f772c7da731c5dd35517474e27b0f3c96cf2241b87c4b9b62c349ee5feb3a1",
+      "0xa3bc5b223cc7c4c078fa2bbc6b50f8c19b3efad973590a94b118b60a8ef616c1",
+      "0x54c7a2b93e02098f41edf745265e4910c1f5c8be4bc011ad801a0fc4e74babbd",
+      "0x8a78f211e9e0f334b5fe2c699ddceec1f850544365de6b75303c1f124aca35de",
+      "0xc3d112b80a6262c3d6d772ad2715191805316ec1dfd4be8ecec4e04cbdeaf61c"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      1,
+      2,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "DISAGREE",
+      "AGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

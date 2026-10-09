@@ -1,0 +1,142 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0x3895e3953bc4aB21A4d39d4d447D708D3598dB03",
+  "source_sha256": "df22904e0e95d614a3bbc9252fb256ae4fcb0b2e72c5728a366eeeffd760b48e",
+  "fixture_revision": "4fc256ccb37732417de63a559e5739d4d5b97011",
+  "transaction": {
+    "label": "additive",
+    "action": "allocate",
+    "hash": "0xe76d3319fb7db8413ae8f78cdcba876e88f37e68c186fdcdb461977b3d4c95a0"
+  },
+  "state": {
+    "batches": [
+      {
+        "record": {
+          "members": [
+            {
+              "id": "amber",
+              "request": "Store the supplied amber archive for one billing period."
+            },
+            {
+              "id": "cobalt",
+              "request": "Store the supplied cobalt archive for one billing period."
+            },
+            {
+              "id": "jade",
+              "request": "Store the supplied jade archive for one billing period."
+            }
+          ],
+          "tariff": "For the stated one-period archive requests, Amber alone costs 6 units, Cobalt alone costs 12 units and Jade alone costs 18 units. A group pays the sum of its members' standalone prices, without discounts, surcharges or any other charge. All requests are covered by these unconditional prices."
+        },
+        "report": {
+          "coalitions": [
+            {
+              "anchors": [
+                0,
+                2
+              ],
+              "cost": 6,
+              "decision": "KNOWN",
+              "mask": 1
+            },
+            {
+              "anchors": [
+                0,
+                2
+              ],
+              "cost": 12,
+              "decision": "KNOWN",
+              "mask": 2
+            },
+            {
+              "anchors": [
+                0,
+                1,
+                2
+              ],
+              "cost": 18,
+              "decision": "KNOWN",
+              "mask": 3
+            },
+            {
+              "anchors": [
+                0,
+                2
+              ],
+              "cost": 18,
+              "decision": "KNOWN",
+              "mask": 4
+            },
+            {
+              "anchors": [
+                0,
+                1,
+                2
+              ],
+              "cost": 24,
+              "decision": "KNOWN",
+              "mask": 5
+            },
+            {
+              "anchors": [
+                0,
+                1,
+                2
+              ],
+              "cost": 30,
+              "decision": "KNOWN",
+              "mask": 6
+            },
+            {
+              "anchors": [
+                0,
+                1,
+                2
+              ],
+              "cost": 36,
+              "decision": "KNOWN",
+              "mask": 7
+            }
+          ]
+        },
+        "result": {
+          "core_violations": [],
+          "costs": [
+            0,
+            6,
+            12,
+            18,
+            18,
+            24,
+            30,
+            36
+          ],
+          "denominator": 6,
+          "monotonicity_violations": [],
+          "rounded_core_violations": [],
+          "rounded_preview": [
+            6,
+            12,
+            18
+          ],
+          "shares_numerator": [
+            36,
+            72,
+            108
+          ],
+          "status": "STABLE",
+          "unknown": []
+        },
+        "sha256": "8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json"
+      }
+    ],
+    "members": [
+      "amber",
+      "cobalt",
+      "jade"
+    ],
+    "source_repository": "gabrieladash123-bit/coalition-meter"
+  }
+}
