@@ -1,0 +1,5 @@
+{
+  "run_id": 37883790808,
+  "source_sha256": "8c9b487497f88693c2f52e0c8eb7830f64ca076ec87610c4bd209ec5f65afabf",
+  "reason": "Independent validator matched all seven additive costs but its separate anchor judge rejected mask 3. Diagnostic stdout is preserved. Repaired judge uses expanded named members, explicitly permits source-based arithmetic and requires per-mask substantive explanations. Exact independent cost agreement and all seven positive anchor checks remain required."
+}

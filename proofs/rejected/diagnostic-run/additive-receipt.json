@@ -1,0 +1,185 @@
+{
+  "hash": "0x731447caeb80985ffd42b911a9439262af7c10ce3ef624fdb97850d1ca1cbf0f",
+  "from_address": "0x212AFd9c62D3Ef2feC37F6344fb9e5b74B423Ad5",
+  "to_address": "0x2b81d2a72bE02366D797FFEb3f5cDf37Ad78CcC0",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+    }
+  },
+  "status": 7,
+  "result": 7,
+  "consensus_data": {
+    "votes": {
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+      "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "disagree",
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "disagree",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "disagree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"members\":[{\"id\":\"amber\"\"request\":\"Store the supplied amber archive for one billing period.\"},{\"id\":\"cobalt\"\"request\":\"Store the supplied cobalt archive for one billing period.\"},{\"id\":\"jade\"\"request\":\"Store the supplied jade archive for one billing period.\"},]\"tariff\":\"For the stated one-period archive requests, Amber alone costs 6 units, Cobalt alone costs 12 units and Jade alone costs 18 units. A group pays the sum of its members' standalone prices, without discounts, surcharges or any other charge. All requests are covered by these unconditional prices.\"}\"report\":{\"coalitions\":[{\"anchors\":[0,1,2,]\"cost\":6\"decision\":\"KNOWN\"\"mask\":1},{\"anchors\":[0,1,2,]\"cost\":12\"decision\":\"KNOWN\"\"mask\":2},{\"anchors\":[0,1,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":3},{\"anchors\":[0,1,2,]\"cost\":18\"decision\":\"KNOWN\"\"mask\":4},{\"anchors\":[0,1,2,]\"cost\":24\"decision\":\"KNOWN\"\"mask\":5},{\"anchors\":[0,1,2,]\"cost\":30\"decision\":\"KNOWN\"\"mask\":6},{\"anchors\":[0,1,2,]\"cost\":36\"decision\":\"KNOWN\"\"mask\":7},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,1,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,1,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"valid\":[true,true,false,true,true,true,true]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/coalition-meter/4fc256ccb37732417de63a559e5739d4d5b97011/records/additive.json\",\"8d07dd249161e1ad675e35cf9eff63de3b3d903657bf90dd38d78d872efd5181\",]\"method\":\"allocate\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"valid\":[true,true,false,true,true,true,true]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0,1,2],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0,1,2],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0,1,2],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1,2],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1,2],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1,2],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"valid\":[true,true,true,true,true,true,true]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "COALITIONMETER independent {\"coalitions\":[{\"anchors\":[0],\"cost\":6,\"decision\":\"KNOWN\",\"mask\":1},{\"anchors\":[0],\"cost\":12,\"decision\":\"KNOWN\",\"mask\":2},{\"anchors\":[0,1],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":3},{\"anchors\":[0],\"cost\":18,\"decision\":\"KNOWN\",\"mask\":4},{\"anchors\":[0,1],\"cost\":24,\"decision\":\"KNOWN\",\"mask\":5},{\"anchors\":[0,1],\"cost\":30,\"decision\":\"KNOWN\",\"mask\":6},{\"anchors\":[0,1],\"cost\":36,\"decision\":\"KNOWN\",\"mask\":7}]}\nCOALITIONMETER anchor verdict {\"valid\":[true,false,false,false,false,false,false]}\n",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      }
+    ]
+  },
+  "gaslimit": 1,
+  "nonce": 1,
+  "created_at": "2026-10-09T04:26:34.887643+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x212AFd9c62D3Ef2feC37F6344fb9e5b74B423Ad5",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022901808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a99000000000000000000000000212afd9c62d3ef2fec37f6344fb9e5b74b423ad50000000000000000000000002b81d2a72be02366d797ffeb3f5cdf37ad78ccc00000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e4f8e2b8df16046172677315a40868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f636f616c6974696f6e2d6d657465722f346663323536636362333737333234313764653633613535396535373339643464356239373031312f7265636f7264732f61646469746976652e6a736f6e840438643037646432343931363165316164363735653335636639656666363364653362336439303336353762663930646433386437386438373265666435313831066d6574686f6444616c6c6f6361746500000000000000000000000000000000000000000000000000000000008301e481a009a663445e8852e69396f94b97bf800a94ddf2becd92c11d21484dbc629c255ca00bb32d4e0e4f29c5e10d2c954c34939261b0f350c66fb9963d943325bf0dc132"
+  },
+  "value_credited": false,
+  "sender": "0x212AFd9c62D3Ef2feC37F6344fb9e5b74B423Ad5",
+  "recipient": "0x2b81d2a72bE02366D797FFEb3f5cDf37Ad78CcC0",
+  "tx_id": "0x731447caeb80985ffd42b911a9439262af7c10ce3ef624fdb97850d1ca1cbf0f",
+  "activator": "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+  "last_leader": "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8",
+  "result_name": "MAJORITY_DISAGREE",
+  "num_of_rounds": "4",
+  "last_round": {
+    "round": "3",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "0",
+    "result": 7,
+    "round_validators": [
+      "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC",
+      "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d",
+      "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658"
+    ],
+    "validator_votes_hash": [
+      "0x38a192c7f0db68d49031934bef315950b6ca6d8e9244ab4c5971ea405f91bf0f",
+      "0x3e9721cd6d2f23c0f1cdbe6069872370d584be61f1e116a1877da2bc51e011ed",
+      "0x47096b94d4a865c652acae2bb8f32607c8d028a1293d6e83eaa6a0b73129b621",
+      "0x3003a9d40d3d686045e462c4508b677cbd61aaf3ba02258622b5172bba2b6c52",
+      "0x89ecd19c2929246ee889df7d16d325003eff355345afa61b5725f5b98fc02796"
+    ],
+    "validator_votes": [
+      2,
+      5,
+      2,
+      1,
+      2
+    ],
+    "validator_votes_name": [
+      "DISAGREE",
+      "IDLE",
+      "DISAGREE",
+      "AGREE",
+      "DISAGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

@@ -24,7 +24,8 @@ def mock(vm,name,leader=None,own=None,anchors=None,body=None):
     vm.mock_web(re.escape(source(name)[0]),{'status':200,'body':BODY[name] if body is None else body})
     vm.mock_llm(r'.*COALITIONMETER-LEADER.*',json.dumps(report(name) if leader is None else leader))
     vm.mock_llm(r'.*COALITIONMETER-VALIDATOR.*',json.dumps(report(name) if own is None else own))
-    vm.mock_llm(r'.*COALITIONMETER-ANCHORS.*',json.dumps({'valid':[True]*7 if anchors is None else anchors}))
+    valid=[True]*7 if anchors is None else anchors
+    vm.mock_llm(r'.*COALITIONMETER-ANCHORS.*',json.dumps({'checks':[{'mask':i,'valid':value,'reason':'Referenced tariff rules substantiate the proposed total or absence.'} for i,value in enumerate(valid,1)]}))
 
 @pytest.fixture
 def meter(direct_deploy):
